@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Download - UltraSuite Repository</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <link href="../extra.css" rel="stylesheet">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Download";
+    var mkdocs_page_input_path = "download.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+<a class="navbar-brand" 
+    href="..">
+    <img src="../img/logo.png" align='left'>
+    UltraSuite Repository
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../data/uxtd/">Ultrax Typically Developing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../data/uxssd/">Ultrax Speech Sound Disorders</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../data/upx/">Ultraphonix</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Download</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#download">Download</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#using-rsync">Using rsync</a></li>
+        
+            <li><a class="toctree-l3" href="#setting-up">Setting up</a></li>
+        
+            <li><a class="toctree-l3" href="#download-a-sample">Download a sample</a></li>
+        
+            <li><a class="toctree-l3" href="#download-a-data-set">Download a data set</a></li>
+        
+            <li><a class="toctree-l3" href="#download-label-data">Download label data</a></li>
+        
+            <li><a class="toctree-l3" href="#download-the-entire-repository">Download the entire repository</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../faq/">Frequently Asked Questions</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">UltraSuite Repository</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Download</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="download">Download</h1>
+<p>Data from the UltraSuite repository is available via the <code>rsync</code> command. All flags from this tools should be valid when syncing the UltraSuite repository.</p>
+<p>Because the repository is quite large (<strong>380 GB</strong>), please make sure you have enough space on your disk. Alternatively, go through these instructions and download only a subset of the data for which you have space for.</p>
+<h3 id="using-rsync">Using rsync</h3>
+<p><code>rsync</code> is a command-line tool that allows efficient and fast transfer and synchronisation of files across systems. This is usually pre-install on Linux or mac machines. These instructions assume you have the tool installed on your system, but do not assume a lot of experience with its usage. </p>
+<p>If you are familiar with <code>rsync</code>, you can skip ahead and merely glance at the typical commands. All flags commonly used with the tool should be applicable to this scenario.</p>
+<p>If you are not familiar with <code>rsync</code>, you should be aware that, if you have a version of the data on your disk, <code>rsync</code> will <strong>synchronise</strong> your local data with the latest version of UltraSuite. If there are changes to the UltraSuite repository, your data will be overwritten with those latest changes. A useful flag to use with the tool is <code>--dry-run</code>, which will simulate the synchronisation process.</p>
+<h3 id="setting-up">Setting up</h3>
+<p>To get started, please create a directory on a hard drive where a large amount of space is available. Then, change your current directory onto that newly created one. On Linux or maxOS, this can be achieved by running:</p>
+<pre><code class="shell">mkdir UltraSuite
+cd UltraSuite
+</code></pre>
+
+<h3 id="download-a-sample">Download a sample</h3>
+<p>Now that we have a place to store the data, we will download some sample data from the repository. This might be useful if you wish to get a small example to get familiar with the format of the data or test some code.</p>
+<p>We first download a single utterance. This is a set of four files: a waveform (.wav), a text file with the prompt text and recording date time (.txt), the raw ultrasound data (ult), and a text file with parameters for the ultrasound data (.param). Running the following command should sync the first utterance from speaker 01M in the Ultrax Typically Developing (UXTD) data set. </p>
+<pre><code class="shell">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/core-uxtd/core/01M/001* .
+</code></pre>
+
+<p>The sample we've just downloaded should give you an idea of the type of data available in UltraSuite. Speaker 01M in the UXTD set has 121 utterances. You can download different samples by changing <code>001*</code>to the corresponding utterance.</p>
+<p>If you'd like, you can get all of the data for speaker 01M. This corresponds to <strong>1.9GB</strong>!  To do so, please run the following command</p>
+<pre><code class="shell">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/core-uxtd/core/01M .
+</code></pre>
+
+<h3 id="download-a-data-set">Download a data set</h3>
+<p>You can download an entire data set by syncing its corresponding directory. For example, for the UXTD data set (82GB), you can run the following command:</p>
+<pre><code class="shell">sync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/core-uxtd .
+</code></pre>
+
+<p>The same command can be used to download <code>/core-uxssd</code> and <code>/core-upx</code>. Please be aware that each dataset can be quite large:</p>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/core-uxtd</td>
+<td>82GB</td>
+</tr>
+<tr>
+<td>/core-uxssd</td>
+<td>110GB</td>
+</tr>
+<tr>
+<td>/core-upx</td>
+<td>191GB</td>
+</tr>
+</tbody>
+</table>
+<p>The structure of each data set is identical and it follows the following pattern:</p>
+<pre><code>./core-uxtd
+    /doc
+    /core
+        /01M
+        /02M
+        ...
+</code></pre>
+
+<p>Please see the list of speakers of each of the datasets, if you are interested in downloading data from single speakers. To simulate the process, you can run <code>rsync</code> with the flag <code>--dry-run</code> and get an estimate for the amount of data.</p>
+<h3 id="download-label-data">Download label data</h3>
+<p>To download manual and automatically-generated labels for all three datasets (80MB), please run:</p>
+<pre><code class="sh">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/labels-uxtd-uxssd-upx .
+</code></pre>
+
+<p>You can get labels for each of the datasets by appending <code>/uxtd</code>, <code>/uxssd</code>, or <code>/upx</code>to the command above. There is also a documentation directory for the labels called <code>/doc</code>.</p>
+<h3 id="download-the-entire-repository">Download the entire repository</h3>
+<p>The following command illustrates how you can download the entire repository. </p>
+<p><strong>Warning: running the following command will download ~380GB of data!</strong></p>
+<p><code>rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite .</code></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../faq/" class="btn btn-neutral float-right" title="Frequently Asked Questions">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../data/upx/" class="btn btn-neutral" title="Ultraphonix"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../data/upx/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../faq/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
