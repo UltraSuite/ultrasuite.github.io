@@ -82,11 +82,13 @@
     
         <ul>
         
+            <li><a class="toctree-l3" href="#download-sample-data">Download sample data</a></li>
+        
             <li><a class="toctree-l3" href="#using-rsync">Using rsync</a></li>
         
             <li><a class="toctree-l3" href="#setting-up">Setting up</a></li>
         
-            <li><a class="toctree-l3" href="#download-a-sample">Download a sample</a></li>
+            <li><a class="toctree-l3" href="#download-an-utterance">Download an utterance</a></li>
         
             <li><a class="toctree-l3" href="#download-a-data-set">Download a data set</a></li>
         
@@ -140,19 +142,23 @@
             <div class="section">
               
                 <h1 id="download">Download</h1>
-<p>Data from the UltraSuite repository is available via the <code>rsync</code> command. All flags from this tools should be valid when syncing the UltraSuite repository.</p>
-<p>Because the repository is quite large (<strong>380 GB</strong>), please make sure you have enough space on your disk. Alternatively, go through these instructions and download only a subset of the data for which you have space for.</p>
+<p>The complete data from the UltraSuite repository is available via the <code>rsync</code> command. All flags from this tool should be valid when syncing the UltraSuite repository.</p>
+<p>Sample data from the UltraSuite repository is available via <a href="http://hdl.handle.net/10283/3255">Edinburgh DataShare</a>. </p>
+<h3 id="download-sample-data">Download sample data</h3>
+<p>Download of a very small subset of the UltraSuite repository can be achieve via <a href="http://hdl.handle.net/10283/3255">Edinburgh DataShare</a>. The downloadable datasets on DataShare contain a small sample from each of the three datasets in the UltraSuite repository, as well as their accompanying documentation. This is convenient for users who are unable or unwilling to download the repository using <code>rsync</code>.</p>
+<p>This may be the case if you are a Windows user. <code>rsync</code> is not trivially installed and manipulated from Windows. Feel free to explore the sample data from Edinburgh DataShare and determine if the UltraSuite repository fit your needs. Please get in touch with us and we'll try and share the complete repository with you.</p>
 <h3 id="using-rsync">Using rsync</h3>
 <p><code>rsync</code> is a command-line tool that allows efficient and fast transfer and synchronisation of files across systems. This is usually pre-install on Linux or mac machines. These instructions assume you have the tool installed on your system, but do not assume a lot of experience with its usage. </p>
 <p>If you are familiar with <code>rsync</code>, you can skip ahead and merely glance at the typical commands. All flags commonly used with the tool should be applicable to this scenario. See the <a href="https://linux.die.net/man/1/rsync">man page</a> for further details.</p>
 <p>If you are not familiar with <code>rsync</code>, you should be aware that, if you have a version of the data on your disk, <code>rsync</code> will <strong>synchronise</strong> your local data with the latest version of UltraSuite. If there are changes to the UltraSuite repository, your data will be overwritten with those latest changes. A useful flag to use with the tool is <code>--dry-run</code>, which will simulate the synchronisation process.</p>
+<p>Because the repository is quite large (<strong>380 GB</strong>), please make sure you have enough space on your disk. Alternatively, go through these instructions and download only a subset of the data for which you have space for.</p>
 <h3 id="setting-up">Setting up</h3>
 <p>To get started, please create a directory on a hard drive where a large amount of space is available. Then, change your current directory onto that newly created one. On Linux or maxOS, this can be achieved by running:</p>
 <pre><code class="shell">mkdir UltraSuite
 cd UltraSuite
 </code></pre>
 
-<h3 id="download-a-sample">Download a sample</h3>
+<h3 id="download-an-utterance">Download an utterance</h3>
 <p>Now that we have a place to store the data, we will download some sample data from the repository. This might be useful if you wish to get a small example to get familiar with the format of the data or test some code.</p>
 <p>We first download a single utterance. This is a set of four files: a waveform (.wav), a text file with the prompt text and recording date time (.txt), the raw ultrasound data (ult), and a text file with parameters for the ultrasound data (.param). Running the following command should sync the first utterance from speaker 01M in the Ultrax Typically Developing (UXTD) data set. </p>
 <pre><code class="shell">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/core-uxtd/core/01M/001* .
