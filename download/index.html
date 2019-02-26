@@ -171,7 +171,7 @@ cd UltraSuite
 
 <h3 id="download-a-data-set">Download a data set</h3>
 <p>You can download an entire data set by syncing its corresponding directory. For example, for the UXTD data set (82GB), you can run the following command:</p>
-<pre><code class="shell">sync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/core-uxtd .
+<pre><code class="shell">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/core-uxtd .
 </code></pre>
 
 <p>The same command can be used to download <code>/core-uxssd</code> and <code>/core-upx</code>. Please be aware that each dataset can be quite large:</p>
@@ -219,7 +219,7 @@ cd UltraSuite
 <pre><code class="sh">rsync -av --include=&quot;*/&quot; --include=&quot;*.wav&quot; --exclude=&quot;*&quot; ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/core-uxtd .
 </code></pre>
 
-<p>This command downloads all waveforms from the UXTD dataset. Note that the <code>--include</code> flags works together with the <code>--exclude</code> flag. It is used to include files that would otherwise be excluded. The way to interpret this command is that we first exclude all files with <code>--exclude="*"</code>. Then we include all directories with <code>--include="*/"</code>and all files ending with the desired extension with <code>--include="*.wav"</code>. Additional include flags may specify other data types, for example <code>--include="*.txt"</code>to download all prompts.</p>
+<p>This command downloads all waveforms from the UXTD dataset. Note that the <code>--include</code> flags works together with the <code>--exclude</code> flag. It is used to include files that would otherwise be excluded. The way to interpret this command is that we first exclude all files with <code>--exclude="*"</code>. Then we include all directories with <code>--include="*/"</code> and all files ending with the desired extension with <code>--include="*.wav"</code>. Additional include flags may specify other data types, for example <code>--include="*.txt"</code> to download all prompts.</p>
 <h3 id="download-the-entire-repository">Download the entire repository</h3>
 <p>The following command illustrates how you can download the entire repository. </p>
 <p><strong>Warning: running the following command will download ~380GB of data!</strong></p>
