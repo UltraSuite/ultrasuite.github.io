@@ -158,7 +158,7 @@
 <p>If you are not familiar with <code>rsync</code>, you should be aware that, if you have a version of the data on your disk, <code>rsync</code> will <strong>synchronise</strong> your local data with the latest version of UltraSuite. If there are changes to the UltraSuite repository, your data will be overwritten with those latest changes. A useful flag to use with the tool is <code>--dry-run</code>, which will simulate the synchronisation process.</p>
 <p>Because the repository is quite large (<strong>380 GB</strong>), please make sure you have enough space on your disk. Alternatively, go through these instructions and download only a subset of the data for which you have space for.</p>
 <h3 id="setting-up">Setting up</h3>
-<p>To get started, please create a directory on a hard drive where a large amount of space is available. Then, change your current directory onto that newly created one. On Linux or maxOS, this can be achieved by running:</p>
+<p>To get started, please create a directory on a hard drive where a large amount of space is available. Then, change your current directory onto that newly created one. On Linux or macOS, this can be achieved by running:</p>
 <pre><code class="shell">mkdir UltraSuite
 cd UltraSuite
 </code></pre>
@@ -214,11 +214,16 @@ cd UltraSuite
 <p>Please see the list of speakers of each of the datasets, if you are interested in downloading data from single speakers. Each speaker directory will contain four data types: waveforms (<code>.wav</code>), prompts (<code>.txt</code>), ultrasound data (<code>.ult</code>), and ultrasound parameters (<code>.param</code>) .</p>
 <p>To simulate the process, you can run <code>rsync</code> with the flag <code>--dry-run</code> and get an estimate for the amount of data.</p>
 <h3 id="download-label-data">Download label data</h3>
-<p>To download manual and automatically-generated labels for all three datasets (80MB), please run:</p>
+<p>To download manual and automatically-generated labels for all three datasets (~80MB), please run:</p>
 <pre><code class="sh">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/labels-uxtd-uxssd-upx .
 </code></pre>
 
 <p>You can get labels for each of the datasets by appending <code>/uxtd</code>, <code>/uxssd</code>, or <code>/upx</code>to the command above. There is also a documentation directory for the labels called <code>/doc</code>.</p>
+<p>Previous versions of label data are archived in the top-level directory <code>archive</code>. To download an earlier version of label data, please run something like:</p>
+<pre><code class="sh">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/archive/labels-uxtd-uxssd-upx-1.0.zip .
+</code></pre>
+
+<p>The command above will download version 1.0 of labels. Replace the version number as appropriate.</p>
 <h3 id="download-selected-data-types">Download selected data types</h3>
 <p>Using <code>rsync</code>, it is possible to download only specific data types by specifying the desired extension. For example, you can download waveforms (<code>.wav</code>), prompts (<code>.txt</code>), ultrasound data (<code>.ult</code>), or ultrasound parameters (<code>.param</code>) separately. To achieve this, the <code>rsync</code>command would look like:</p>
 <pre><code class="sh">rsync -av --include=&quot;*/&quot; --include=&quot;*.wav&quot; --exclude=&quot;*&quot; ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/core-uxtd .
