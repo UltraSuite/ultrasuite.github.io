@@ -78,6 +78,8 @@
         
             <li><a class="toctree-l3" href="#file-ids">File IDs</a></li>
         
+            <li><a class="toctree-l3" href="#reference-labels">Reference Labels</a></li>
+        
             <li><a class="toctree-l3" href="#additional-notes">Additional Notes</a></li>
         
             <li><a class="toctree-l3" href="#references">References</a></li>
@@ -291,16 +293,16 @@
 <td>speaker diarization identifying therapist (SLT) and child (CHILD) speech</td>
 </tr>
 <tr>
-<td>reference_labels</td>
-<td>manually-revised word-level alignments.</td>
-</tr>
-<tr>
 <td>word_labels</td>
 <td>automatic word-level alignment</td>
 </tr>
 <tr>
 <td>phone_labels</td>
 <td>automatic phone-level alignment</td>
+</tr>
+<tr>
+<td>reference_labels</td>
+<td>manually-revised labels (see below for details)</td>
 </tr>
 </tbody>
 </table>
@@ -310,6 +312,22 @@
 <p>Individual recordings are indexed for each session according to their recording times.
 See the prompt text file for recording date/time. </p>
 <p>Each file ID also includes a prompt type identifier. See <a href="../data/">Data</a> for details.</p>
+<h3 id="reference-labels">Reference Labels</h3>
+<p>Reference labels are given for a few utterances of the UXTD and UXSSD datasets. These have been manually revised at the speaker (60 utterances) and word level (199 utterances). The revision was done by a single annotator.</p>
+<p>Note that phone labels are also provided, but these are <em>not entirely manually-revised</em>. This set of annotation is force-aligned at the phone level, but constrained by the manually-revised word boundaries.</p>
+<p>Labels are available in Praat's TextGrid format (<code>TG</code>) and HTK's lab format (<code>lab</code>). The structure for the directory is as follows:</p>
+<pre><code>/uxssd
+    /phone_labels
+        /lab
+        /TG
+    /word_labels
+        /lab
+        /TG
+    /speaker_labels
+        /lab
+        /TG
+</code></pre>
+
 <h3 id="additional-notes">Additional Notes</h3>
 <p>Speaker 05M was subjected to two rounds of therapy, with corresponding Assessment sessions. These are identified as *_round2 in the speaker directory. Therapy sessions for this speaker are indexed chronologically.</p>
 <h3 id="references">References</h3>

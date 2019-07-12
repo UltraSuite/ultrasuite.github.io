@@ -73,6 +73,8 @@
         
             <li><a class="toctree-l3" href="#file-ids">File IDs</a></li>
         
+            <li><a class="toctree-l3" href="#reference-labels">Reference Labels</a></li>
+        
             <li><a class="toctree-l3" href="#references">References</a></li>
         
         </ul>
@@ -189,10 +191,6 @@
 <td>manual annotation from SLT, when available. See [2] for details</td>
 </tr>
 <tr>
-<td>reference_labels</td>
-<td>manually-revised word-level alignments.</td>
-</tr>
-<tr>
 <td>speaker_labels</td>
 <td>speaker diarization identifying therapist (SLT) and child (CHILD) speech</td>
 </tr>
@@ -204,6 +202,10 @@
 <td>phone_labels</td>
 <td>automatic phone-level alignment</td>
 </tr>
+<tr>
+<td>reference_labels</td>
+<td>manually-revised labels (see below for details)</td>
+</tr>
 </tbody>
 </table>
 <p>Labels are available in Praat's TextGrid format and HTK's lab format.</p>
@@ -212,6 +214,22 @@
 <p>Individual recordings are indexed for each session according to their recording times.
 See the prompt text file for recording date/time. </p>
 <p>Each file ID also includes a prompt type identifier. See <a href="../data/">Data</a> for details.</p>
+<h3 id="reference-labels">Reference Labels</h3>
+<p>Reference labels are given for a few utterances of the UXTD and UXSSD datasets. These have been manually revised at the speaker (60 utterances) and word level (199 utterances). The revision was done by a single annotator.</p>
+<p>Note that phone labels are also provided, but these are <em>not entirely manually-revised</em>. This set of annotation is force-aligned at the phone level, but constrained by the manually-revised word boundaries.</p>
+<p>Labels are available in Praat's TextGrid format (<code>TG</code>) and HTK's lab format (<code>lab</code>). The structure for the directory is as follows:</p>
+<pre><code>/uxtd
+    /phone_labels
+        /lab
+        /TG
+    /word_labels
+        /lab
+        /TG
+    /speaker_labels
+        /lab
+        /TG
+</code></pre>
+
 <h3 id="references">References</h3>
 <p>[1] Eshky, A., Ribeiro, M. S., Cleland, J., Richmond, K., Roxburgh, Z.,  Scobbie, J., &amp; Wrench, A. (2018) <strong>Ultrasuite: A repository of ultrasound and acoustic data from child speech therapy sessions</strong>. Proceedings of INTERSPEECH. Hyderabad, India.</p>
 <p>[2] Cleland, J., Scobbie, J., Naki, S., &amp; Wrench, A. (2015). <strong>Helping children learn non-native articulations: the implications for ultrasound-based clinical intervention.</strong> Proceedings of the 18th International Congress of Phonetic Sciences : ICPhS 2015. ed. / The Scottish Consortium for ICPhS 2015. 1. ed. Scotland, 2015. p. 1-5 698.</p>
