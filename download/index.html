@@ -7,14 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   
+  
   <link rel="shortcut icon" href="../img/favicon.ico">
   <title>Download - UltraSuite Repository</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
-  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  <link href="../extra.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../extra.css" rel="stylesheet" />
   
   <script>
     // Current page data
@@ -25,7 +26,7 @@
   
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -36,6 +37,7 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
 <a class="navbar-brand" 
     href="..">
@@ -50,73 +52,110 @@
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../data/uxtd/">Ultrax Typically Developing</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../data/uxssd/">Ultrax Speech Sound Disorders</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../data/upx/">Ultraphonix</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../mailing-list/">Community</a>
-	    </li>
-          
-            <li class="toctree-l1 current">
-		
-    <a class="current" href="./">Download</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#download">Download</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#download-sample-data">Download sample data</a></li>
-        
-            <li><a class="toctree-l3" href="#using-rsync">Using rsync</a></li>
-        
-            <li><a class="toctree-l3" href="#setting-up">Setting up</a></li>
-        
-            <li><a class="toctree-l3" href="#download-an-utterance">Download an utterance</a></li>
-        
-            <li><a class="toctree-l3" href="#download-a-data-set">Download a data set</a></li>
-        
-            <li><a class="toctree-l3" href="#download-label-data">Download label data</a></li>
-        
-            <li><a class="toctree-l3" href="#download-selected-data-types">Download selected data types</a></li>
-        
-            <li><a class="toctree-l3" href="#download-the-entire-repository">Download the entire repository</a></li>
-        
-        </ul>
-    
-
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+    <ul>
     </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../faq/">Frequently Asked Questions</a>
-	    </li>
-          
-        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../data/uxtd/">Ultrax Typically Developing</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../data/uxtd/#speakers">Speakers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../data/uxtd/#data-types">Data Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../data/uxtd/#file-ids">File IDs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../data/uxtd/#reference-labels">Reference Labels</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../data/uxtd/#references">References</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../data/uxssd/">Ultrax Speech Sound Disorders</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../data/uxssd/#speakers">Speakers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../data/uxssd/#data-types">Data Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../data/uxssd/#file-ids">File IDs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../data/uxssd/#reference-labels">Reference Labels</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../data/uxssd/#additional-notes">Additional Notes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../data/uxssd/#references">References</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../data/upx/">Ultraphonix</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../data/upx/#speakers">Speakers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../data/upx/#sessions">Sessions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../data/upx/#data-types">Data Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../data/upx/#file-ids">File IDs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../data/upx/#references">References</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../mailing-list/">Community</a>
+    <ul>
+    </ul>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Download</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#download-sample-data">Download sample data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#windows-users">Windows users</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-rsync">Using rsync</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#setting-up">Setting up</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-an-utterance">Download an utterance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-a-data-set">Download a data set</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-label-data">Download label data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-selected-data-types">Download selected data types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download-the-entire-repository">Download the entire repository</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../faq/">Frequently Asked Questions</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../faq/#why-is-there-a-difference-in-the-numbers-reported-here-and-those-in-the-paper">Why is there a difference in the numbers reported here and those in the paper?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../faq/#why-is-there-silence-in-some-waveforms">Why is there silence in some waveforms?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../faq/#i-found-an-issue-in-one-or-more-utterances-how-can-i-report-it">I found an issue in one or more utterances. How can I report it?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../faq/#what-is-this-data-repository-being-used-for">What is this data repository being used for?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../faq/#how-can-i-cite-ultrasuite">How can I cite UltraSuite?</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
       </div>
-      &nbsp;
+    </div>
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -141,6 +180,7 @@
       
     </li>
   </ul>
+  
   <hr/>
 </div>
           <div role="main">
@@ -150,8 +190,14 @@
 <p>The complete data from the UltraSuite repository is available via the <code>rsync</code> command. All flags from this tool should be valid when syncing the UltraSuite repository.</p>
 <p>Sample data from the UltraSuite repository is available via <a href="http://hdl.handle.net/10283/3255">Edinburgh DataShare</a>. </p>
 <h3 id="download-sample-data">Download sample data</h3>
-<p>Download of a very small subset of the UltraSuite repository can be achieve via <a href="http://hdl.handle.net/10283/3255">Edinburgh DataShare</a>. The downloadable datasets on DataShare contain a small sample from each of the three datasets in the UltraSuite repository, as well as their accompanying documentation. This is convenient for users who are unable or unwilling to download the repository using <code>rsync</code>.</p>
-<p>This may be the case if you are a Windows user. <code>rsync</code> is not trivially installed and manipulated from Windows. Feel free to explore the sample data from Edinburgh DataShare and determine if the UltraSuite repository fit your needs. Please get in touch with us and we'll try and share the complete repository with you.</p>
+<p>Download of a very small subset of the UltraSuite repository can be achieve via <a href="http://hdl.handle.net/10283/3255">Edinburgh DataShare</a>. The downloadable datasets on DataShare contain a small sample from each of the three datasets in the UltraSuite repository, as well as their accompanying documentation. This is convenient for users who are unable or unwilling to download the repository using <code>rsync</code> or users that want a quick and easy way to look at the data.</p>
+<h3 id="windows-users">Windows users</h3>
+<p><code>rsync</code> does not come pre-installed in Windows machines. If you are a Windows user, we have prepared instructions on how to setup <code>rsync</code> on your computer:</p>
+<ul>
+<li><a href="../download_win/">Installing rsync on Windows</a></li>
+</ul>
+<p>Before going through those instructions, feel free to explore the sample data from Edinburgh DataShare and determine if the UltraSuite repository fit your needs.</p>
+<p>Additionally, as a Windows user, you might be interested in using <a href="http://www.articulateinstruments.com/aaa/">Articulate Assistant Advanced</a> (AAA) for your work. After downloading, the Ultrasuite data can be imported into the AAA software (revision 219.x or higher) one speaker at a time using the “File|Import|ultrasuite…” dialogue. First create a new project or open an existing project. The speaker will be created as a client in that project and all the selected files will be imported.</p>
 <h3 id="using-rsync">Using rsync</h3>
 <p><code>rsync</code> is a command-line tool that allows efficient and fast transfer and synchronisation of files across systems. This is usually pre-install on Linux or mac machines. These instructions assume you have the tool installed on your system, but do not assume a lot of experience with its usage. </p>
 <p>If you are familiar with <code>rsync</code>, you can skip ahead and merely glance at the typical commands. All flags commonly used with the tool should be applicable to this scenario. See the <a href="https://linux.die.net/man/1/rsync">man page</a> for further details.</p>
@@ -256,7 +302,7 @@ cd UltraSuite
     
   </div>
 
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
         </div>
@@ -266,7 +312,7 @@ cd UltraSuite
 
   </div>
 
-  <div class="rst-versions" role="note" style="cursor: pointer">
+  <div class="rst-versions" role="note" aria-label="versions">
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
@@ -280,6 +326,11 @@ cd UltraSuite
     <script>var base_url = '..';</script>
     <script src="../js/theme.js" defer></script>
       <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
 
 </body>
 </html>
