@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>TaL Corpus - UltraSuite Repository</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../../extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "TaL Corpus";
+    var mkdocs_page_input_path = "data/tal_corpus.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+<a class="navbar-brand" 
+    href="../..">
+    <img src="../../img/logo.png" align='left'>
+    UltraSuite Repository
+</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+    <ul>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../uxtd/">Ultrax Typically Developing</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../uxtd/#speakers">Speakers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../uxtd/#data-types">Data Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../uxtd/#file-ids">File IDs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../uxtd/#reference-labels">Reference Labels</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../uxtd/#references">References</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../uxssd/">Ultrax Speech Sound Disorders</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../uxssd/#speakers">Speakers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../uxssd/#data-types">Data Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../uxssd/#file-ids">File IDs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../uxssd/#reference-labels">Reference Labels</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../uxssd/#additional-notes">Additional Notes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../uxssd/#references">References</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../upx/">Ultraphonix</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../upx/#speakers">Speakers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../upx/#sessions">Sessions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../upx/#data-types">Data Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../upx/#file-ids">File IDs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../upx/#references">References</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">TaL Corpus</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#datasets">Datasets</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#speaker-and-session-identifiers">Speaker and Session Identifiers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#file-identifiers">File Identifiers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#data-types">Data Types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#structure">Structure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#download">Download</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-the-data">Using the data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#additional-notes">Additional Notes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#references">References</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../mailing-list/">Community</a>
+    <ul>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../download/">Download</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../download/#download-sample-data">Download sample data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../download/#windows-users">Windows users</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../download/#using-rsync">Using rsync</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../download/#setting-up">Setting up</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../download/#download-an-utterance">Download an utterance</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../download/#download-a-data-set">Download a data set</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../download/#download-label-data">Download label data</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../download/#download-selected-data-types">Download selected data types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../download/#download-the-entire-repository">Download the entire repository</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../faq/">Frequently Asked Questions</a>
+    <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../faq/#why-is-there-a-difference-in-the-numbers-reported-here-and-those-in-the-paper">Why is there a difference in the numbers reported here and those in the paper?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../faq/#why-is-there-silence-in-some-waveforms">Why is there silence in some waveforms?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../faq/#i-found-an-issue-in-one-or-more-utterances-how-can-i-report-it">I found an issue in one or more utterances. How can I report it?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../faq/#what-is-this-data-repository-being-used-for">What is this data repository being used for?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../faq/#how-can-i-cite-ultrasuite">How can I cite UltraSuite?</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">UltraSuite Repository</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>TaL Corpus</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="the-tongue-and-lips-corpus">The Tongue and Lips Corpus</h1>
+<p><strong>A multi-speaker corpus of ultrasound images of the tongue and video images of the lips</strong></p>
+<p>The  Tongue  and  Lips  (TaL) corpus is a  multi-speaker  corpus  of  ultrasound  images  of the  tongue  and  video  images  of  lips. This  corpus  contains synchronised  imaging  data  of  extraoral  (lips)  and  intraoral (tongue) articulators from 82 native speakers of English.</p>
+<p>For more information, please read the corpus paper (TODO).</p>
+<p><img alt="image" src="../../imgs/sample_tal.png" /></p>
+<h3 id="datasets">Datasets</h3>
+<p>The TaL corpus consists of two datasets:</p>
+<ul>
+<li><strong>TaL1</strong> is a single-speaker dataset containing data of one professional voice talent, a male native speaker of English, over six recording sessions. </li>
+<li><strong>TaL80</strong> is a multi-speaker dataset contains recording sessions of 81 native speakers of English without voice talent experience. Each speaker was recording over a single recording session.</li>
+</ul>
+<h3 id="speaker-and-session-identifiers">Speaker and Session Identifiers</h3>
+<p>In the TaL80 dataset, speaker identifiers denote speaker number, gender (m/f), and country of origin. Country identifiers are: (e)ngland, (s)cotland, (i)reland, (n)orthern-ireland, (o)ther. Examples: <em>01fi, 02fe, 03mn, 04me, ...</em></p>
+<p>The TaL1 dataset only has 1 speaker, so there are no speaker identifiers. Instead, we have recording sessions, which are simply called <em>day1</em>, <em>day2</em>, <em>day3</em>, ...</p>
+<h3 id="file-identifiers">File Identifiers</h3>
+<p>For each speaker (TaL80) or session (TaL1), utterances are indexed according to their recording times.
+See the prompt text file for recording date/time. Each file ID also includes a tag indicating the prompt type.</p>
+<table>
+<thead>
+<tr>
+<th>Prompt Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>swa</td>
+<td>swallow</td>
+</tr>
+<tr>
+<td>cal</td>
+<td>calibration</td>
+</tr>
+<tr>
+<td>aud</td>
+<td>audible read speech</td>
+</tr>
+<tr>
+<td>sil</td>
+<td>silent speech</td>
+</tr>
+<tr>
+<td>whi</td>
+<td>whispered speech (TaL1 only)</td>
+</tr>
+<tr>
+<td>spo</td>
+<td>spontaneous speech utterance (unprompted speech)</td>
+</tr>
+<tr>
+<td>xaud</td>
+<td>shared audible read speech utterances</td>
+</tr>
+<tr>
+<td>xsil</td>
+<td>shared silent speech utterances</td>
+</tr>
+<tr>
+<td>xwhi</td>
+<td>shared whispered speech utterance (TaL1 only)</td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
+<p>Calibration prompts (<strong>cal</strong>) and swallows (<strong>swa</strong>) were read at the beginning and end of each recording session and before and after a short break.</p>
+<p>The tag <strong>x</strong> denotes prompts that were shared across speakers (TaL80) or recording sessions (TaL1).</p>
+<p>Examples: 001_swa, 002_cal, 004_xaud, 028_spo, 029_xsil, 038_sil, ...</p>
+<h3 id="data-types">Data Types</h3>
+<p>Each utterance consists of five core data types, which can be identified by their file extension.</p>
+<p><strong><u>Core data types</u></strong></p>
+<table>
+<thead>
+<tr>
+<th>Data type</th>
+<th>Extension</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prompt</td>
+<td>.txt</td>
+<td>text file with prompt and datetime of recording</td>
+</tr>
+<tr>
+<td>waveform</td>
+<td>.wav</td>
+<td>speech waveform</td>
+</tr>
+<tr>
+<td>synchronisation</td>
+<td>.sync</td>
+<td>audio synchronisation signal (waveform)</td>
+</tr>
+<tr>
+<td>ultrasound</td>
+<td>.ult, .param</td>
+<td>raw ultrasound data (.ult) and ultrasound parameters (.param)</td>
+</tr>
+<tr>
+<td>video</td>
+<td>.mp4</td>
+<td>video images of the lips (synchronised to waveform)</td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
+<p><strong>Example.</strong> The second utterance recorded by speaker 01fi is a calibration utterance with the identifier <em>002_cal</em>. The five core data types for this utterance are the files: <em>002_cal.txt, 002_cal.wav, 002_cal.sync, 002_cal.ult, 002_cal.param, 002_cal.mp3.</em></p>
+<p><strong><u>Additional data</u></strong></p>
+<p>Because spontaneous speech utterances can be long in duration (up to 60 seconds),  we manually annotated the boundaries of shorter time segments (typically 5-10 seconds). This annotation is available as a CSV file with start and end time in seconds of the short segments nd their respective transcription. This file is identified by the extension <em>.lab</em>.</p>
+<h3 id="structure">Structure</h3>
+<p>TaL1 and TaL80 follow a similar structure, but they are independent datasets. For this reason, shared prompts are only marked within datasets (across speakers for TaL80 and sessions for TaL1). There is an overlap in the recorded prompts in the two datasets. Most prompts read in TaL1 were recorded by the first speakers in TaL80, but a small subset was read by all speakers. Users should be aware of this if using both datasets, particularly when designing training and test splits.</p>
+<p>Directory structure for TaL1:</p>
+<pre><code>/TaL1
+    /samples
+        /core
+        /video
+    /core
+        /day2
+        /day3
+        ...
+    /doc
+</code></pre>
+
+<p>Directory structure for TaL80:</p>
+<pre><code>/TaL80
+    /samples
+        /core
+        /video
+    /core
+        /01fi
+        /02fe
+        /03mn
+        ...
+    /doc
+</code></pre>
+
+<p>The <code>samples</code> directory contains a subset of the larger dataset (2 samples per speaker/session). You download this directory first and browse some examples, if you wish to have a quick look at the TaL corpus. In <code>samples/core</code>, you will find examples of the core data types. In <code>samples/video</code>, you will find the same examples generated with the <a href="https://github.com/UltraSuite/tal-tools">tal-tools visualiser</a>.</p>
+<p>The <code>doc</code> directory contains the documentation for the data, as well as some additional documents, such as version number and anonymised participant information.</p>
+<p>The <code>core</code> directory contains the core data for the dataset.</p>
+<h3 id="download">Download</h3>
+<p>The datasets are quite large, so please make sure that you have enough disk space before attempting to download.</p>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/TaL1/core</td>
+<td>49GB</td>
+</tr>
+<tr>
+<td>/TaL80/core</td>
+<td>498GB</td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
+<p>If you prefer to browse some samples before downloading the full data, you can download the <code>samples</code> directories.</p>
+<table>
+<thead>
+<tr>
+<th>Dataset</th>
+<th>Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/TaL1/samples</td>
+<td>2.1GB</td>
+</tr>
+<tr>
+<td>/TaL80/samples</td>
+<td>8.2GB</td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
+<p>To download the TaL corpus, please check the <a href="../../download/">download instructions for the Ultrasuite repository</a>. The instrutions are applicable to the TaL corpus, in case you prefer to download part of the data (an utterance, a specific data type, etc).  Here is a sample command for the TaL1 dataset:</p>
+<pre><code>TODO: download cmd
+</code></pre>
+
+<h3 id="using-the-data">Using the data</h3>
+<p>The video data released with the TaL corpus does not embed the audio. If you wish to see the video with the corresponding waveform, you can use <a href="https://ffmpeg.org/">ffmpeg</a> with a command such as:</p>
+<pre><code>ffmpeg -i input.mp4 -i input.wav -c:v copy -map 0:v:0 -map 1:a:0 -c:a ac3 -b:a 192k output.mp4
+</code></pre>
+
+<p>If you wish to visualise the ultrasound, with or without audio, you can use <a href="https://github.com/UltraSuite/ultrasuite-tools">Ultrasuite tools</a>.</p>
+<p>For more complex visualisations including video, ultrasound, and spectrogram/waveform, please have a tool at the <a href="https://github.com/UltraSuite/tal-tools/tree/master/visualiser">TaL corpus visualiser</a>.</p>
+<p>If you're just interested in general input/output, one or more of <a href="https://github.com/UltraSuite/tal-tools/blob/master/visualiser/tools/io.py">these functions</a> should provide some useful examples.</p>
+<h3 id="additional-notes">Additional Notes</h3>
+<p><strong>TaL1 Notes</strong></p>
+<p>The video synchronisation failed during the first recording session of the TaL1 data. The problem can be seen in the synchronisation signal, which merged the video and ultrasound signals. We opted to release this session, as it might still be useful for some applications that do not depend on video and audio synchronisation. This session is named <code>day1_no_vid_sync</code>.</p>
+<p><strong>TaL80 Notes</strong></p>
+<p>Please see the participant notes in <code>TaL80/doc</code> for anonymised detailed notes on all participants. We describe here two cases where image quality was not as good as we hoped.</p>
+<ul>
+<li>Speaker <code>17ms</code> has a large amount of facial hair, which hides a large portion of the lips in the video. The ultrasound images of the tongue appear reasonable.</li>
+<li>Speaker <code>60ms</code> has a large amount of facial hair under the chin, which created some problems for the ultrasound probe. The video, however, appears reasonable.</li>
+</ul>
+<h3 id="references">References</h3>
+<p>If using data or code from the TaL corpus, please provide appropriate web links and cite the following paper:</p>
+<p>[1] TODO</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../mailing-list/" class="btn btn-neutral float-right" title="Community">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../upx/" class="btn btn-neutral" title="Ultraphonix"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../upx/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../mailing-list/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
