@@ -113,13 +113,15 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#datasets">Datasets</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#speaker-and-session-identifiers">Speaker and Session Identifiers</a>
+    <li class="toctree-l2"><a class="reference internal" href="#speaker-and-session-identifiers">Speaker and session identifiers</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#file-identifiers">File Identifiers</a>
+    <li class="toctree-l2"><a class="reference internal" href="#file-identifiers">File identifiers</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#data-types">Data Types</a>
+    <li class="toctree-l2"><a class="reference internal" href="#data-types">Data types</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#structure">Structure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#video-samples">Video samples</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#download">Download</a>
     </li>
@@ -127,14 +129,20 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#additional-notes">Additional Notes</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#acknowledgements">Acknowledgements</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#references">References</a>
     </li>
     </ul>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../../mailing-list/">Community</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../../community/">Community</a>
     <ul>
+    <li class="toctree-l2"><a class="reference internal" href="../../community/#mailing-list">Mailing list</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../community/#publications">Publications</a>
+    </li>
     </ul>
                     </li>
                 </ul>
@@ -213,7 +221,7 @@
                 <h1 id="the-tongue-and-lips-corpus">The Tongue and Lips Corpus</h1>
 <p><strong>A multi-speaker corpus of ultrasound images of the tongue and video images of the lips</strong></p>
 <p>The  Tongue  and  Lips  (TaL) corpus is a  multi-speaker  corpus  of  ultrasound  images  of the  tongue  and  video  images  of  lips. This  corpus  contains synchronised  imaging  data  of  extraoral  (lips)  and  intraoral (tongue) articulators from 82 native speakers of English.</p>
-<p>For more information, please read the corpus paper (TODO).</p>
+<p>For more information, please read <a href="../../papers/tal_corpus_SLT2021.pdf">the TaL corpus paper here!</a></p>
 <p><img alt="image" src="../../imgs/sample_tal.png" /></p>
 <h3 id="datasets">Datasets</h3>
 <p>The TaL corpus consists of two datasets:</p>
@@ -221,10 +229,10 @@
 <li><strong>TaL1</strong> is a single-speaker dataset containing data of one professional voice talent, a male native speaker of English, over six recording sessions. </li>
 <li><strong>TaL80</strong> is a multi-speaker dataset contains recording sessions of 81 native speakers of English without voice talent experience. Each speaker was recording over a single recording session.</li>
 </ul>
-<h3 id="speaker-and-session-identifiers">Speaker and Session Identifiers</h3>
+<h3 id="speaker-and-session-identifiers">Speaker and session identifiers</h3>
 <p>In the TaL80 dataset, speaker identifiers denote speaker number, gender (m/f), and country of origin. Country identifiers are: (e)ngland, (s)cotland, (i)reland, (n)orthern-ireland, (o)ther. Examples: <em>01fi, 02fe, 03mn, 04me, ...</em></p>
 <p>The TaL1 dataset only has 1 speaker, so there are no speaker identifiers. Instead, we have recording sessions, which are simply called <em>day1</em>, <em>day2</em>, <em>day3</em>, ...</p>
-<h3 id="file-identifiers">File Identifiers</h3>
+<h3 id="file-identifiers">File identifiers</h3>
 <p>For each speaker (TaL80) or session (TaL1), utterances are indexed according to their recording times.
 See the prompt text file for recording date/time. Each file ID also includes a tag indicating the prompt type.</p>
 <table>
@@ -277,7 +285,7 @@ See the prompt text file for recording date/time. Each file ID also includes a t
 <p>Calibration prompts (<strong>cal</strong>) and swallows (<strong>swa</strong>) were read at the beginning and end of each recording session and before and after a short break.</p>
 <p>The tag <strong>x</strong> denotes prompts that were shared across speakers (TaL80) or recording sessions (TaL1).</p>
 <p>Examples: 001_swa, 002_cal, 004_xaud, 028_spo, 029_xsil, 038_sil, ...</p>
-<h3 id="data-types">Data Types</h3>
+<h3 id="data-types">Data types</h3>
 <p>Each utterance consists of five core data types, which can be identified by their file extension.</p>
 <p><strong><u>Core data types</u></strong></p>
 <table>
@@ -347,9 +355,15 @@ See the prompt text file for recording date/time. Each file ID also includes a t
     /doc
 </code></pre>
 
-<p>The <code>samples</code> directory contains a subset of the larger dataset (2 samples per speaker/session). You download this directory first and browse some examples, if you wish to have a quick look at the TaL corpus. In <code>samples/core</code>, you will find examples of the core data types. In <code>samples/video</code>, you will find the same examples generated with the <a href="https://github.com/UltraSuite/tal-tools">tal-tools visualiser</a>.</p>
+<p>The <code>samples</code> directory contains a subset of the larger dataset (2 samples per speaker/session). If you wish to have a quick look at the TaL corpus, you can download this directory first and browse some examples.  The directory <code>samples/core</code> provides a subset of the core data types and the directory <code>samples/video</code> provides video samples generated with the <a href="https://github.com/UltraSuite/tal-tools">tal-tools visualiser</a>.</p>
 <p>The <code>doc</code> directory contains the documentation for the data, as well as some additional documents, such as version number and anonymised participant information.</p>
 <p>The <code>core</code> directory contains the core data for the dataset.</p>
+<h3 id="video-samples">Video samples</h3>
+<p>In <code>samples/video</code>, there are a few video examples generated with the <a href="https://github.com/UltraSuite/tal-tools">tal-tools visualiser</a>. These sample videos are also available online:</p>
+<ul>
+<li><a href="https://www.youtube.com/playlist?list=PLF3n1anVeNf3FiFLjqwh5tBebG2WccZtD">TaL1 video samples</a>.</li>
+<li><a href="https://www.youtube.com/playlist?list=PLF3n1anVeNf1WiHQbdXoQbT4PTLxoxQK0">TaL80 video samples</a></li>
+</ul>
 <h3 id="download">Download</h3>
 <p>The datasets are quite large, so please make sure that you have enough disk space before attempting to download.</p>
 <table>
@@ -391,8 +405,14 @@ See the prompt text file for recording date/time. Each file ID also includes a t
 </tbody>
 </table>
 <p></br></p>
-<p>To download the TaL corpus, please check the <a href="../../download/">download instructions for the Ultrasuite repository</a>. The instrutions are applicable to the TaL corpus, in case you prefer to download part of the data (an utterance, a specific data type, etc).  Here is a sample command for the TaL1 dataset:</p>
-<pre><code>TODO: download cmd
+<p>To download the TaL corpus, please check the <a href="../../download/">download instructions for the Ultrasuite repository</a>. The instrutions are applicable to the TaL corpus, in case you prefer to download part of the data (an utterance, a specific data type, etc). However, note that we replace <code>ultrasuite-rsync.inf.ed.ac.uk::ultrasuite</code> with <code>ultrasuite-rsync.inf.ed.ac.uk::tal-corpus</code>. </p>
+<p><strong>Warning</strong>: the commands below will download 49GB and 498GB of data, respectively! Please make sure you have enough disk space. Check the <a href="../../download/">download instructions for the Ultrasuite repository</a> to download subsets of the data.</p>
+<p>To download the TaL1 dataset, you can run:</p>
+<pre><code class="bash">rsync -av ultrasuite-rsync.inf.ed.ac.uk::tal-corpus/TaL1 .
+</code></pre>
+
+<p>Similarly, to download the TaL80 dataset, you can run:</p>
+<pre><code class="bash">rsync -av ultrasuite-rsync.inf.ed.ac.uk::tal-corpus/TaL80 .
 </code></pre>
 
 <h3 id="using-the-data">Using the data</h3>
@@ -412,9 +432,13 @@ See the prompt text file for recording date/time. Each file ID also includes a t
 <li>Speaker <code>17ms</code> has a large amount of facial hair, which hides a large portion of the lips in the video. The ultrasound images of the tongue appear reasonable.</li>
 <li>Speaker <code>60ms</code> has a large amount of facial hair under the chin, which created some problems for the ultrasound probe. The video, however, appears reasonable.</li>
 </ul>
+<h3 id="acknowledgements">Acknowledgements</h3>
+<p>Supported by the Carnegie Trust for the Universities of Scotland (Research Incentive Grant number 008585) and the EPSRC Healthcare Partnerships grant number EP/P02338X/1 (Ultrax2020). We thank the participants of this corpus for providing the consent that allows this data to be freely available to the research community.</p>
 <h3 id="references">References</h3>
 <p>If using data or code from the TaL corpus, please provide appropriate web links and cite the following paper:</p>
-<p>[1] TODO</p>
+<ul>
+<li>Ribeiro, M. S., Sanger, J., Zhang, J.-X., Eshky, A., Wrench, A., Richmond, K.,&amp; Renals, S. (2021).  <strong>TaL: a synchronised multi-speaker corpus of ultrasound tongue imaging, audio, and lip videos.</strong> Proceedings of the IEEE Workshop on Spoken Language Technology (SLT). Shenzhen, China. [<a href="../../papers/tal_corpus_SLT2021.pdf">paper</a>] </li>
+</ul>
               
             </div>
           </div>
@@ -422,7 +446,7 @@ See the prompt text file for recording date/time. Each file ID also includes a t
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../mailing-list/" class="btn btn-neutral float-right" title="Community">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../community/" class="btn btn-neutral float-right" title="Community">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../upx/" class="btn btn-neutral" title="Ultraphonix"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -454,7 +478,7 @@ See the prompt text file for recording date/time. Each file ID also includes a t
         <span><a href="../upx/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../../mailing-list/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../../community/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

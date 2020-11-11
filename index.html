@@ -113,13 +113,15 @@
     <ul>
     <li class="toctree-l2"><a class="reference internal" href="data/tal_corpus/#datasets">Datasets</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="data/tal_corpus/#speaker-and-session-identifiers">Speaker and Session Identifiers</a>
+    <li class="toctree-l2"><a class="reference internal" href="data/tal_corpus/#speaker-and-session-identifiers">Speaker and session identifiers</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="data/tal_corpus/#file-identifiers">File Identifiers</a>
+    <li class="toctree-l2"><a class="reference internal" href="data/tal_corpus/#file-identifiers">File identifiers</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="data/tal_corpus/#data-types">Data Types</a>
+    <li class="toctree-l2"><a class="reference internal" href="data/tal_corpus/#data-types">Data types</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="data/tal_corpus/#structure">Structure</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="data/tal_corpus/#video-samples">Video samples</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="data/tal_corpus/#download">Download</a>
     </li>
@@ -127,14 +129,20 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="data/tal_corpus/#additional-notes">Additional Notes</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="data/tal_corpus/#acknowledgements">Acknowledgements</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="data/tal_corpus/#references">References</a>
     </li>
     </ul>
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="mailing-list/">Community</a>
+                    <li class="toctree-l1"><a class="reference internal" href="community/">Community</a>
     <ul>
+    <li class="toctree-l2"><a class="reference internal" href="community/#mailing-list">Mailing list</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="community/#publications">Publications</a>
+    </li>
     </ul>
                     </li>
                 </ul>
@@ -212,7 +220,8 @@
               
                 <h2 id="ultrasuite-repository">UltraSuite Repository</h2>
 <p><strong>A repository of ultrasound and acoustic data from child speech therapy sessions</strong></p>
-<p>UltraSuite is a repository of ultrasound and acoustic data from child speech therapy sessions. The current release includes three data collections, one from typically developing children and two from children with speech sound disorders. It also includes a set of annotations, some manual and some automatically produced, and tools to process, transform and visualise the data. <a href="papers/ultrasuite_IS18.pdf">Read the paper here!</a> </p>
+<p>Ultrasuite is a collection of ultrasound and acoustic speech data from child speech therapy sessions. The current release includes three datasets, one from typically developing children and two from speech disordered children. Ultrasuite also includes a set of annotations, some manual and some automatically produced, and tools to process, transform and visualise the data. <a href="papers/ultrasuite_IS18.pdf">Read the Ultrasuite paper here!</a> </p>
+<p>Ultrasuite also distributes the Tongue and Lips (TaL) corpus, a  multi-speaker  corpus  of synchronised ultrasound  images  of the  tongue  and  video  images  of  lips. <a href="papers/tal_corpus_SLT2021.pdf">Read the TaL paper here!</a>.</p>
 <p><img alt="image" src="imgs/sample.png" /></p>
 <h2 id="data">Data</h2>
 <p>There are three child speech datasets available in the repository:</p>
@@ -230,23 +239,28 @@
 <ul>
 <li><a href="https://github.com/UltraSuite/ultrasuite-tools">Ultrasuite Tools</a> - Python library to process raw ultrasound data.</li>
 <li><a href="https://github.com/UltraSuite/ultrasuite-kaldi">Ultrasuite Kaldi</a> - Recipes and other code to use UltraSuite data with the <a href="http://kaldi-asr.org/">Kaldi Speech Recognition Toolkit</a>.</li>
+<li><a href="https://github.com/UltraSuite/tal-tools">TaL Tools</a> - Resources for the Tongue and Lips corpus.</li>
 </ul>
 <h2 id="contributing">Contributing</h2>
-<p>We welcome user contribution to UltraSuite! We are hoping to keep UltraSuite in active development with help from the community. All contributions will be given proper credits! There are various ways to participate: </p>
+<p>We welcome user contribution to Ultrasuite! We are hoping to keep Ultrasuite in active development with help from the community. All contributions will be given proper credit! There are various ways to participate: </p>
 <p><strong>Contributing with data</strong></p>
-<p>The current release of UltraSuite has three datasets of ultrasound and audio from Child speech, but we hope to include additional datasets from other modalities (e.g. MRI) and age groups (e.g. Adults). If you'd like share data that you collected through UltraSuite, please get in touch with any member of the <a href="http://www.ultrax-speech.org/team">Ultrax Speech project</a>. Note that even though data is available through UltraSuite, we encourage users to cite the original authors.</p>
+<p>The current release of Ultrasuite has three datasets of ultrasound and audio from child speech and two datasets of adult speech, but we hope to include additional datasets in the future. If you'd like to share data that you collected, please get in touch with any member of the <a href="http://www.ultrax-speech.org/team">Ultrax Speech project</a>. We are also happy to host any resources that you have generated for current Ultrasuite datasets (e.g. annotations, scores, tongue splines, etc). Note that even though data is available through UltraSuite, we encourage users to cite the original authors.</p>
 <p><strong>Contributing with code</strong></p>
-<p>To contribute with <a href="https://github.com/UltraSuite/ultrasuite-tools">code</a> or to help improve <a href="https://github.com/UltraSuite/ultrasuite-doc">this documentation</a>, please submit your changes with <a href="https://help.github.com/articles/about-pull-requests/">Pull Requests.</a></p>
+<p>To contribute with <a href="https://github.com/UltraSuite">code</a> or to help improve <a href="https://github.com/UltraSuite/ultrasuite-doc">this documentation</a>, please submit your changes with <a href="https://help.github.com/articles/about-pull-requests/">Pull Requests.</a></p>
 <p><strong>Reporting issues</strong></p>
 <p>To report any issues, you can use GitHub's Issue Tracker or you can contact any member of the  <a href="http://www.ultrax-speech.org/team">Ultrax Speech project</a>. Please submit any issues related to code in their respective repositories using Github's Issue Tracker. For issues found in the data, please contact us directly.</p>
 <h2 id="community">Community</h2>
-<p>Subscribe to the <a href="mailing-list/">UltraSuite mailing list</a> to get updates from the UltraSuite repository and to send and receive messages from other UltraSuite users.</p>
+<p>Subscribe to the <a href="community/">UltraSuite mailing list</a> to get updates from the UltraSuite repository and to send and receive messages from other UltraSuite users.</p>
 <h2 id="license">License</h2>
 <p>Datasets from UltraSuite are distributed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">Attribution-NonCommercial 4.0 Generic (CC BY-NC 4.0).</a> Code is available under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License v.2.</a></p>
-<h2 id="citation">Citation</h2>
-<p>If using data or code from UltraSuite, please provide appropriate web links and cite the following paper:</p>
+<h2 id="citations">Citations</h2>
+<p>If using data from <strong>UXTD, UXSSD, or UPX</strong>, please cite the following paper:</p>
 <ul>
-<li>Eshky, A., Ribeiro, M. S., Cleland, J., Richmond, K., Roxburgh, Z.,  Scobbie, J., &amp; Wrench, A. (2018) <strong>Ultrasuite: A repository of ultrasound and acoustic data from child speech therapy sessions</strong>. Proceedings of INTERSPEECH. Hyderabad, India. [<a href="http://homepages.inf.ed.ac.uk/aeshky/pub/aeshky_IS18.pdf">pdf</a>] [<a href="http://homepages.inf.ed.ac.uk/aeshky/pub/aeshky_IS18.bib">bibtex</a>]</li>
+<li>Eshky, A., Ribeiro, M. S., Cleland, J., Richmond, K., Roxburgh, Z.,  Scobbie, J., &amp; Wrench, A. (2018) <strong>Ultrasuite: A repository of ultrasound and acoustic data from child speech therapy sessions</strong>. Proceedings of INTERSPEECH. Hyderabad, India. [<a href="papers/ultrasuite_IS18.pdf">paper</a>]</li>
+</ul>
+<p>If using data from the <strong>Tongue and Lips (TaL) corpus</strong>, please cite the following paper:</p>
+<ul>
+<li>Ribeiro, M. S., Sanger, J., Zhang, J.-X., Eshky, A., Wrench, A., Richmond, K.,&amp; Renals, S. (2021).  <strong>TaL: a synchronised multi-speaker corpus of ultrasound tongue imaging, audio, and lip videos.</strong> Proceedings of the IEEE Workshop on Spoken Language Technology (SLT). Shenzhen, China. [<a href="papers/tal_corpus_SLT2021.pdf">paper</a>] </li>
 </ul>
               
             </div>
@@ -301,5 +315,5 @@
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-07-10 14:48:18
+Build Date UTC : 2020-11-11 16:23:49
 -->
