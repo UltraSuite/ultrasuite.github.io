@@ -341,7 +341,6 @@ See the prompt text file for recording date/time. Each file ID also includes a t
         ...
     /doc
 </code></pre>
-
 <p>Directory structure for TaL80:</p>
 <pre><code>/TaL80
     /samples
@@ -354,7 +353,6 @@ See the prompt text file for recording date/time. Each file ID also includes a t
         ...
     /doc
 </code></pre>
-
 <p>The <code>samples</code> directory contains a subset of the larger dataset (2 samples per speaker/session). If you wish to have a quick look at the TaL corpus, you can download this directory first and browse some examples.  The directory <code>samples/core</code> provides a subset of the core data types and the directory <code>samples/video</code> provides video samples generated with the <a href="https://github.com/UltraSuite/tal-tools">tal-tools visualiser</a>.</p>
 <p>The <code>doc</code> directory contains the documentation for the data, as well as some additional documents, such as version number and anonymised participant information.</p>
 <p>The <code>core</code> directory contains the core data for the dataset.</p>
@@ -408,18 +406,15 @@ See the prompt text file for recording date/time. Each file ID also includes a t
 <p>To download the TaL corpus, please check the <a href="../../download/">download instructions for the Ultrasuite repository</a>. The instrutions are applicable to the TaL corpus, in case you prefer to download part of the data (an utterance, a specific data type, etc). However, note that we replace <code>ultrasuite-rsync.inf.ed.ac.uk::ultrasuite</code> with <code>ultrasuite-rsync.inf.ed.ac.uk::tal-corpus</code>. </p>
 <p><strong>Warning</strong>: the commands below will download 49GB and 498GB of data, respectively! Please make sure you have enough disk space. Check the <a href="../../download/">download instructions for the Ultrasuite repository</a> to download subsets of the data.</p>
 <p>To download the TaL1 dataset, you can run:</p>
-<pre><code class="bash">rsync -av ultrasuite-rsync.inf.ed.ac.uk::tal-corpus/TaL1 .
+<pre><code class="language-bash">rsync -av ultrasuite-rsync.inf.ed.ac.uk::tal-corpus/TaL1 .
 </code></pre>
-
 <p>Similarly, to download the TaL80 dataset, you can run:</p>
-<pre><code class="bash">rsync -av ultrasuite-rsync.inf.ed.ac.uk::tal-corpus/TaL80 .
+<pre><code class="language-bash">rsync -av ultrasuite-rsync.inf.ed.ac.uk::tal-corpus/TaL80 .
 </code></pre>
-
 <h3 id="using-the-data">Using the data</h3>
 <p>The video data released with the TaL corpus does not embed the audio. If you wish to see the video with the corresponding waveform, you can use <a href="https://ffmpeg.org/">ffmpeg</a> with a command such as:</p>
 <pre><code>ffmpeg -i input.mp4 -i input.wav -c:v copy -map 0:v:0 -map 1:a:0 -c:a ac3 -b:a 192k output.mp4
 </code></pre>
-
 <p>If you wish to visualise the ultrasound, with or without audio, you can use <a href="https://github.com/UltraSuite/ultrasuite-tools">Ultrasuite tools</a>.</p>
 <p>For more complex visualisations including video, ultrasound, and spectrogram/waveform, please have a tool at the <a href="https://github.com/UltraSuite/tal-tools/tree/master/visualiser">TaL corpus visualiser</a>.</p>
 <p>If you're just interested in general input/output, one or more of <a href="https://github.com/UltraSuite/tal-tools/blob/master/visualiser/tools/io.py">these functions</a> should provide some useful examples.</p>
