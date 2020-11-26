@@ -147,6 +147,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#using-the-data">Using the data</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#synchronisation-of-data-streams">Synchronisation of data streams</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#additional-notes">Additional Notes</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#acknowledgements">Acknowledgements</a>
@@ -205,11 +207,17 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../../faq/#why-is-there-silence-in-some-waveforms">Why is there silence in some waveforms?</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../faq/#do-you-have-any-notes-on-synchronisation">Do you have any notes on synchronisation?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../faq/#why-are-some-speakers-missing-from-the-cleft-dataset">Why are some speakers missing from the Cleft dataset?</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="../../faq/#i-found-an-issue-in-one-or-more-utterances-how-can-i-report-it">I found an issue in one or more utterances. How can I report it?</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../../faq/#what-is-this-data-repository-being-used-for">What is this data repository being used for?</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../../faq/#how-can-i-cite-ultrasuite">How can I cite UltraSuite?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../../faq/#how-can-i-cite-the-tal-corpus">How can I cite the TaL corpus?</a>
     </li>
     </ul>
                     </li>
@@ -369,6 +377,7 @@ See the prompt text file for recording date/time. Each file ID also includes a t
         ...
     /doc
 </code></pre>
+
 <p>Directory structure for TaL80:</p>
 <pre><code>/TaL80
     /samples
@@ -381,6 +390,7 @@ See the prompt text file for recording date/time. Each file ID also includes a t
         ...
     /doc
 </code></pre>
+
 <p>The <code>samples</code> directory contains a subset of the larger dataset (2 samples per speaker/session). If you wish to have a quick look at the TaL corpus, you can download this directory first and browse some examples.  The directory <code>samples/core</code> provides a subset of the core data types and the directory <code>samples/video</code> provides video samples generated with the <a href="https://github.com/UltraSuite/tal-tools">tal-tools visualiser</a>.</p>
 <p>The <code>doc</code> directory contains the documentation for the data, as well as some additional documents, such as version number and anonymised participant information.</p>
 <p>The <code>core</code> directory contains the core data for the dataset.</p>
@@ -434,21 +444,28 @@ See the prompt text file for recording date/time. Each file ID also includes a t
 <p>To download the TaL corpus, please check the <a href="../../download/">download instructions for the Ultrasuite repository</a>. The instrutions are applicable to the TaL corpus, in case you prefer to download part of the data (an utterance, a specific data type, etc). However, note that we replace <code>ultrasuite-rsync.inf.ed.ac.uk::ultrasuite</code> with <code>ultrasuite-rsync.inf.ed.ac.uk::tal-corpus</code>. </p>
 <p><strong>Warning</strong>: the commands below will download 49GB and 498GB of data, respectively! Please make sure you have enough disk space. Check the <a href="../../download/">download instructions for the Ultrasuite repository</a> to download subsets of the data.</p>
 <p>To download the TaL1 dataset, you can run:</p>
-<pre><code class="language-bash">rsync -av ultrasuite-rsync.inf.ed.ac.uk::tal-corpus/TaL1 .
+<pre><code class="bash">rsync -av ultrasuite-rsync.inf.ed.ac.uk::tal-corpus/TaL1 .
 </code></pre>
+
 <p>Similarly, to download the TaL80 dataset, you can run:</p>
-<pre><code class="language-bash">rsync -av ultrasuite-rsync.inf.ed.ac.uk::tal-corpus/TaL80 .
+<pre><code class="bash">rsync -av ultrasuite-rsync.inf.ed.ac.uk::tal-corpus/TaL80 .
 </code></pre>
+
 <h3 id="using-the-data">Using the data</h3>
 <p>The video data released with the TaL corpus does not embed the audio. If you wish to see the video with the corresponding waveform, you can use <a href="https://ffmpeg.org/">ffmpeg</a> with a command such as:</p>
 <pre><code>ffmpeg -i input.mp4 -i input.wav -c:v copy -map 0:v:0 -map 1:a:0 -c:a ac3 -b:a 192k output.mp4
 </code></pre>
+
 <p>If you wish to visualise the ultrasound, with or without audio, you can use <a href="https://github.com/UltraSuite/ultrasuite-tools">Ultrasuite tools</a>.</p>
 <p>For more complex visualisations including video, ultrasound, and spectrogram/waveform, please have a tool at the <a href="https://github.com/UltraSuite/tal-tools/tree/master/visualiser">TaL corpus visualiser</a>.</p>
 <p>If you're just interested in general input/output, one or more of <a href="https://github.com/UltraSuite/tal-tools/blob/master/visualiser/tools/io.py">these functions</a> should provide some useful examples.</p>
+<h3 id="synchronisation-of-data-streams">Synchronisation of data streams</h3>
+<p>The hardware synchronisation signal used during data collection is available in the TaL corpus. This is a waveform with the file extension <code>.sync</code>. Please check the page linked below for further details. This page might also be useful to understand the overall content of the data.</p>
+<ul>
+<li><a href="../tal_corpus_sync/">Synchronisation signal for the Tongue and Lips corpus</a>.</li>
+</ul>
+<p><strong>Regarding TaL1:</strong> The video synchronisation failed during the first recording session of the TaL1 data. The problem can be seen in the synchronisation signal, which merged the video and ultrasound signals. We chose to release this session, as it might still be useful for some applications that do not depend on video and audio synchronisation. This session is named <code>day1_no_vid_sync</code>. Check the link above for further details.</p>
 <h3 id="additional-notes">Additional Notes</h3>
-<p><strong>TaL1 Notes</strong></p>
-<p>The video synchronisation failed during the first recording session of the TaL1 data. The problem can be seen in the synchronisation signal, which merged the video and ultrasound signals. We opted to release this session, as it might still be useful for some applications that do not depend on video and audio synchronisation. This session is named <code>day1_no_vid_sync</code>.</p>
 <p><strong>TaL80 Notes</strong></p>
 <p>Please see the participant notes in <code>TaL80/doc</code> for anonymised detailed notes on all participants. We describe here two cases where image quality was not as good as we hoped.</p>
 <ul>

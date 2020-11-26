@@ -147,6 +147,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../data/tal_corpus/#using-the-data">Using the data</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="../data/tal_corpus/#synchronisation-of-data-streams">Synchronisation of data streams</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="../data/tal_corpus/#additional-notes">Additional Notes</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../data/tal_corpus/#acknowledgements">Acknowledgements</a>
@@ -205,11 +207,17 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#why-is-there-silence-in-some-waveforms">Why is there silence in some waveforms?</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#do-you-have-any-notes-on-synchronisation">Do you have any notes on synchronisation?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#why-are-some-speakers-missing-from-the-cleft-dataset">Why are some speakers missing from the Cleft dataset?</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#i-found-an-issue-in-one-or-more-utterances-how-can-i-report-it">I found an issue in one or more utterances. How can I report it?</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#what-is-this-data-repository-being-used-for">What is this data repository being used for?</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#how-can-i-cite-ultrasuite">How can I cite UltraSuite?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-can-i-cite-the-tal-corpus">How can I cite the TaL corpus?</a>
     </li>
     </ul>
                     </li>
@@ -248,31 +256,59 @@
               
                 <h1 id="frequently-asked-questions">Frequently Asked Questions</h1>
 <ul>
-<li><a href="#why-is-there-a-difference-in-the-numbers-reported-here-and-those-in-the-paper">Why is there a difference in the numbers reported here and those in the paper?</a></li>
-<li><a href="#why-is-there-silence-in-some-waveforms">Why is there silence in some waveforms?</a></li>
-<li><a href="#i-found-an-issue-in-one-or-more-utterances-how-can-i-report-it">I found an issue in one or more utterances. How can I report it?</a></li>
-<li><a href="#what-is-this-data-repository-being-used-for">What is this data repository being used for?</a></li>
-<li><a href="#how-can-i-cite-ultrasuite">How can I cite UltraSuite?</a></li>
+<li>
+<p><a href="#why-is-there-a-difference-in-the-numbers-reported-here-and-those-in-the-paper">Why is there a difference in the numbers reported here and those in the paper?</a></p>
+</li>
+<li>
+<p><a href="#why-is-there-silence-in-some-waveforms">Why is there silence in some waveforms?</a></p>
+</li>
+<li>
+<p><a href="#do-you-have-any-notes-on-synchronisation">Do you have any notes on synchronisation?</a></p>
+</li>
+<li>
+<p><a href="#why-are-some-speakers-missing-from-the-cleft-dataset">Why are some speakers missing from the Cleft dataset?</a></p>
+</li>
+<li>
+<p><a href="#i-found-an-issue-in-one-or-more-utterances-how-can-i-report-it">I found an issue in one or more utterances. How can I report it?</a></p>
+</li>
+<li>
+<p><a href="#what-is-this-data-repository-being-used-for">What is this data repository being used for?</a></p>
+</li>
+<li>
+<p><a href="#how-can-i-cite-ultrasuite">How can I cite UltraSuite?</a></p>
+</li>
+<li>
+<p><a href="#how-can-i-cite-the-tal-corpus">How can I cite the TaL corpus?</a></p>
+</li>
 </ul>
 <hr />
 <h4 id="why-is-there-a-difference-in-the-numbers-reported-here-and-those-in-the-paper">Why is there a difference in the numbers reported here and those in the paper?</h4>
-<p>Some of the numbers describing the repository in the paper, such as number of utterances or number of speech hours, were estimated at the time of the submission. We are actively working on improving UltraSuite, which means these number might change.</p>
+<p>Some of the numbers describing the repository in the initial paper, such as number of utterances or number of speech hours, were estimated at the time of the submission. We are actively working on improving UltraSuite, which means these number might change.</p>
 <p>For example, estimates for speech hours (child or therapist speech and silence) may change due to different speaker labelling methods or the removal of identifiable information. The number of utterances may change if we find unusable utterances (poor recording or corrupted data).</p>
 <p>To keep track of these changes, please be aware of version numbers in the datasets and their respective labels.</p>
 <h4 id="why-is-there-silence-in-some-waveforms">Why is there silence in some waveforms?</h4>
-<p>Some utterances contain regions of artificial silence. These correspond to regions originally containing identifiable information (such as children's names) and speech from additional speakers (such as parent speech). To remove such data, we have replaced them with silence in the waveform.</p>
+<p>Some utterances contain regions of artificial silence. This occurs only in the child speech datasets. These correspond to regions originally containing identifiable information (such as children's names) and speech from additional speakers (such as parent speech). To remove such data, we have replaced them with silence in the waveform.</p>
+<h4 id="do-you-have-any-notes-on-synchronisation">Do you have any notes on synchronisation?</h4>
+<p>For the Tongue and Lips corpus, <a href="../data/tal_corpus_sync/">these notes might be helpful</a>.</p>
+<h4 id="why-are-some-speakers-missing-from-the-cleft-dataset">Why are some speakers missing from the Cleft dataset?</h4>
+<p>A total of 39 English-speaking children recording data for the cleft data. However, only 29 gave consent for their data to be released. These are 11 female speakers and 18 male speakers. We preserve the original speaker identifiers because it will make it easier to match other published work. For example, Cleland et al (2020) <a href="../data/cleft/#references">cited here</a>.</p>
 <h4 id="i-found-an-issue-in-one-or-more-utterances-how-can-i-report-it">I found an issue in one or more utterances. How can I report it?</h4>
 <p>Please see <a href="..#Contributing">Contributing</a>.</p>
 <h4 id="what-is-this-data-repository-being-used-for">What is this data repository being used for?</h4>
-<p>You can find out the various applications of this data by having a look at <a href="https://scholar.google.com/scholar?cites=9159984300116881095&amp;as_sdt=2005&amp;sciodt=0,5&amp;hl=en">papers that cite Ultrasuite</a>. If you are using the repository or know of any applications not listed in the link above, please get in touch with us. We would be happy to hear about it!</p>
+<p>You can find out the various applications of this data by having a look at <a href="https://scholar.google.com/scholar?cites=9159984300116881095&amp;as_sdt=2005&amp;sciodt=0,5&amp;hl=en">papers that cite Ultrasuite</a>. A list of papers is also available <a href="../community/#publications">here</a>. If you are using the repository or know of any applications not listed in these links, please get in touch with us. We would be happy to hear about it!</p>
 <h4 id="how-can-i-cite-ultrasuite">How can I cite UltraSuite?</h4>
-<p>For the current release of UltraSuite, if using data or code, please provide appropriate web links and cite the following paper:</p>
+<p>If you use UXTD, UXSSD, or UPX, please provide appropriate web links and cite the following paper:</p>
 <ul>
 <li>Eshky, A., Ribeiro, M. S., Cleland, J., Richmond, K., Roxburgh, Z.,  Scobbie, J., &amp; Wrench, A. (2018) <strong>Ultrasuite: A repository of ultrasound and acoustic data from child speech therapy sessions</strong>. Proceedings of INTERSPEECH. Hyderabad, India.</li>
 </ul>
 <p>If you are using automatically-generated labels, you may also like to cite the following paper:</p>
 <ul>
 <li>Ribeiro, M. S., Eshky, A., Richmond, K. &amp; Renals, S., (2019). <strong>Ultrasound tongue imaging for diarization and alignment of child speech therapy sessions</strong>. Proceedings of INTERSPEECH. Graz, Austria.</li>
+</ul>
+<h4 id="how-can-i-cite-the-tal-corpus">How can I cite the TaL corpus?</h4>
+<p>If you use the TaL corpus, please provide appropriate web links and cite the following paper:</p>
+<ul>
+<li>Ribeiro, M. S., Sanger, J., Zhang, J.-X., Eshky, A., Wrench, A., Richmond, K.,&amp; Renals, S. (2021).  <strong>TaL: a synchronised multi-speaker corpus of ultrasound tongue imaging, audio, and lip videos.</strong> Proceedings of the IEEE Workshop on Spoken Language Technology (SLT). Shenzhen, China. [<a href="../papers/tal_corpus_SLT2021.pdf">paper</a>] </li>
 </ul>
               
             </div>

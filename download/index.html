@@ -147,6 +147,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../data/tal_corpus/#using-the-data">Using the data</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="../data/tal_corpus/#synchronisation-of-data-streams">Synchronisation of data streams</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="../data/tal_corpus/#additional-notes">Additional Notes</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../data/tal_corpus/#acknowledgements">Acknowledgements</a>
@@ -205,11 +207,17 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../faq/#why-is-there-silence-in-some-waveforms">Why is there silence in some waveforms?</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="../faq/#do-you-have-any-notes-on-synchronisation">Do you have any notes on synchronisation?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../faq/#why-are-some-speakers-missing-from-the-cleft-dataset">Why are some speakers missing from the Cleft dataset?</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="../faq/#i-found-an-issue-in-one-or-more-utterances-how-can-i-report-it">I found an issue in one or more utterances. How can I report it?</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../faq/#what-is-this-data-repository-being-used-for">What is this data repository being used for?</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="../faq/#how-can-i-cite-ultrasuite">How can I cite UltraSuite?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../faq/#how-can-i-cite-the-tal-corpus">How can I cite the TaL corpus?</a>
     </li>
     </ul>
                     </li>
@@ -265,22 +273,26 @@
 <p>Because the repository is quite large (<strong>380 GB</strong>), please make sure you have enough space on your disk. Alternatively, go through these instructions and download only a subset of the data for which you have space for.</p>
 <h3 id="setting-up">Setting up</h3>
 <p>To get started, please create a directory on a hard drive where a large amount of space is available. Then, change your current directory onto that newly created one. On Linux or macOS, this can be achieved by running:</p>
-<pre><code class="language-shell">mkdir UltraSuite
+<pre><code class="shell">mkdir UltraSuite
 cd UltraSuite
 </code></pre>
+
 <h3 id="download-an-utterance">Download an utterance</h3>
 <p>Now that we have a place to store the data, we will download some sample data from the repository. This might be useful if you wish to get a small example to get familiar with the format of the data or test some code.</p>
 <p>We first download a single utterance. This is a set of four files: a waveform (.wav), a text file with the prompt text and recording date time (.txt), the raw ultrasound data (ult), and a text file with parameters for the ultrasound data (.param). Running the following command should sync the first utterance from speaker 01M in the Ultrax Typically Developing (UXTD) data set. </p>
-<pre><code class="language-shell">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/core-uxtd/core/01M/001* .
+<pre><code class="shell">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/core-uxtd/core/01M/001* .
 </code></pre>
+
 <p>The sample we've just downloaded should give you an idea of the type of data available in UltraSuite. Speaker 01M in the UXTD set has 121 utterances. You can download different samples by changing <code>001*</code> to the corresponding utterance.</p>
 <p>If you'd like, you can get all of the data for speaker 01M. This corresponds to <strong>1.9GB</strong>!  To do so, please run the following command</p>
-<pre><code class="language-shell">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/core-uxtd/core/01M .
+<pre><code class="shell">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/core-uxtd/core/01M .
 </code></pre>
+
 <h3 id="download-a-data-set">Download a data set</h3>
 <p>You can download an entire data set by syncing its corresponding directory. For example, for the UXTD data set (82GB), you can run the following command:</p>
-<pre><code class="language-shell">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/core-uxtd .
+<pre><code class="shell">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/core-uxtd .
 </code></pre>
+
 <p>The same command can be used to download <code>/core-uxssd</code>, <code>/core-upx</code> and <code>/core-cleft</code>. Please be aware that each dataset can be quite large:</p>
 <table>
 <thead>
@@ -316,28 +328,33 @@ cd UltraSuite
         /02M
         ...
 </code></pre>
+
 <p>Please see the list of speakers of each of the datasets, if you are interested in downloading data from single speakers. Each speaker directory will contain four data types: waveforms (<code>.wav</code>), prompts (<code>.txt</code>), ultrasound data (<code>.ult</code>), and ultrasound parameters (<code>.param</code>) .</p>
 <p>To simulate the process, you can run <code>rsync</code> with the flag <code>--dry-run</code> and get an estimate for the amount of data.</p>
 <h3 id="download-label-data">Download label data</h3>
 <h4 id="uxtd-uxssd-upx">UXTD, UXSSD, UPX</h4>
 <p>To download manual and automatically-generated labels for the UXTD, UXSSD, and UPX datasets (~80MB), please run:</p>
-<pre><code class="language-sh">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/labels-uxtd-uxssd-upx .
+<pre><code class="sh">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/labels-uxtd-uxssd-upx .
 </code></pre>
+
 <p>You can get labels for each of the datasets by appending <code>/uxtd</code>, <code>/uxssd</code>, or <code>/upx</code>to the directory in the command above. There is also a documentation directory for the labels called <code>/doc</code>.</p>
 <h4 id="cleft">Cleft</h4>
 <p>To download labels for the cleft dataset (~316K), please run:</p>
-<pre><code class="language-sh">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/labels-cleft .
+<pre><code class="sh">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/labels-cleft .
 </code></pre>
+
 <p>This includes a documentation directory called <code>/doc</code>.</p>
 <h4 id="previous-versions">Previous versions</h4>
 <p>Previous versions of label data are archived in the top-level directory <code>archive</code>. To download an earlier version of label data, please run:</p>
-<pre><code class="language-sh">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/archive/labels-uxtd-uxssd-upx-1.0.zip .
+<pre><code class="sh">rsync -av ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/archive/labels-uxtd-uxssd-upx-1.0.zip .
 </code></pre>
+
 <p>The command above will download version 1.0 of labels. Replace the version number as appropriate.</p>
 <h3 id="download-selected-data-types">Download selected data types</h3>
 <p>Using <code>rsync</code>, it is possible to download only specific data types by specifying the desired extension. For example, you can download waveforms (<code>.wav</code>), prompts (<code>.txt</code>), ultrasound data (<code>.ult</code>), or ultrasound parameters (<code>.param</code>) separately. To achieve this, the <code>rsync</code>command would look like:</p>
-<pre><code class="language-sh">rsync -av --include=&quot;*/&quot; --include=&quot;*.wav&quot; --exclude=&quot;*&quot; ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/core-uxtd .
+<pre><code class="sh">rsync -av --include=&quot;*/&quot; --include=&quot;*.wav&quot; --exclude=&quot;*&quot; ultrasuite-rsync.inf.ed.ac.uk::ultrasuite/core-uxtd .
 </code></pre>
+
 <p>This command downloads all waveforms from the UXTD dataset. Note that the <code>--include</code> flags works together with the <code>--exclude</code> flag. It is used to include files that would otherwise be excluded. The way to interpret this command is that we first exclude all files with <code>--exclude="*"</code>. Then we include all directories with <code>--include="*/"</code> and all files ending with the desired extension with <code>--include="*.wav"</code>. Additional include flags may specify other data types, for example <code>--include="*.txt"</code> to download all prompts.</p>
 <h3 id="download-the-entire-repository">Download the entire repository</h3>
 <p>The following command illustrates how you can download the entire repository. </p>
